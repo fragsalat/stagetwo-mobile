@@ -1,12 +1,5 @@
+<header>
+	<a data-page="Index">Index</a>
+	<a data-page="Forum">Forum</a>
+</header>
 
-		<header>
-			<div class="user">
-				<a href="#">Log in</a>
-			</div>
-			<div class="conversations">
-				<a href="#">Konversationen</a>
-			</div>
-		</header>
-		<section class="article">
-
-		</section>

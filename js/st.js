@@ -8,3 +8,40 @@
  * Define namespace
  */
 ST = {};
+
+ST.Navigation = {
+
+	_currentPage: 'Index',
+
+	init: function() {
+		// Initial Page render
+		this.go(this._currentPage);
+		// Bind naviagte listener
+		$(document.body).delegate('[data-page]', 'click', $.proxy(this._click, this));
+		$(window).bind('popstate', $.proxy(this._popState, this));
+	},
+
+	go: function(page, data) {
+		if (window[page + 'Page'] !== undefined) {
+			new window[page + 'Page'](data);
+		}
+	},
+
+	_click: function(event) {
+		event.preventDefault();
+
+		var page = $(event.currentTarget).data('page');
+		var data = $(event.currentTarget).data();
+		delete data['page'];
+		if (page) {
+			this.go(page.charAt(0).toUpperCase() + page.slice(1), data);
+		}
+	},
+
+	_popState: function(event) {
+		// jQuery fix
+		if (!event.state) {
+			event.state = event.originalEvent.state;
+		}
+	}
+};

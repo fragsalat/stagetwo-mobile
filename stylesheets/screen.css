@@ -66,3 +66,102 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Open Sans Light"), local("OpenSans-Light"), url(../font/OpenSans-Light.ttf) format("woff");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans-Regular"), url(../font/OpenSans-Regular.ttf) format("woff");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url(../font/OpenSans-Semibold.ttf) format("woff");
+}
+
+/* line 15, ../sass/screen.scss */
+.clear {
+  clear: both;
+}
+
+/* line 19, ../sass/screen.scss */
+body {
+  background: #fafafa;
+  font-family: 'Open Sans';
+  font-weight: 300;
+}
+
+/* line 24, ../sass/screen.scss */
+header {
+  background: #555555;
+  color: #ddd;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 0 10px;
+}
+/* line 31, ../sass/screen.scss */
+header a {
+  display: inline-block;
+  padding: 10px;
+  font-weight: 300;
+  cursor: pointer;
+}
+/* line 36, ../sass/screen.scss */
+header a:active {
+  color: #fff;
+}
+
+/* line 41, ../sass/screen.scss */
+section.article {
+  width: 100%;
+}
+/* line 43, ../sass/screen.scss */
+section.article article {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #dfdfdf;
+  border-top: 1px solid white;
+  clear: both;
+  min-height: 70px;
+  background: #fafafa;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 53, ../sass/screen.scss */
+section.article article figure {
+  float: left;
+  margin-right: 10px;
+}
+/* line 56, ../sass/screen.scss */
+section.article article figure img {
+  border: 1px solid #dfdfdf;
+  padding: 1px;
+  background: #fafafa;
+}
+/* line 62, ../sass/screen.scss */
+section.article article h2 {
+  color: #bd3623;
+  margin-bottom: 5px;
+  font-weight: 400;
+  width: 80%;
+  float: left;
+}
+/* line 69, ../sass/screen.scss */
+section.article article p.description {
+  font-size: 14px;
+  line-height: 16px;
+  width: 80%;
+  float: left;
+}

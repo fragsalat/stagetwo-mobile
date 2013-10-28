@@ -1,28 +1,27 @@
 ST.Template = {
 
-	_templates: [],
+	_templates: {},
 
 	init: function() {
-		var templates = ['article'];
-		for (var i in templates) {
+		for (var name in this._templates) {
 			// Load html and pre compile it
 			$.ajax({
-				url: 'templates/' + templates[i] + '.tpl',
+				url: 'app/templates/' + name + '.tpl',
 				async: false,
 				success: $.proxy(function(data) {
-					this._templates[template[i]] = Mustache.compile(data);
+					this._templates[name] = Mustache.compile(data);
 				}, this)
 			});
 		}
 	},
 
 	addTemplate: function(templateName) {
-		this._templates.push(templateName);
+		this._templates[templateName] = null;
 	},
 
 	render: function(templateName, data) {
 		// Check if the template exists
-		if (this._templates[templateName] == undefined) {
+		if (!this._templates[templateName]) {
 			return null;
 		}
 		return this._templates[templateName](data);

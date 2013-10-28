@@ -12,8 +12,8 @@ AbstractPage = Class.extend({
 	/**
 	 * Page constructor
 	 */
-	init: function() {
-		this.readData();
+	init: function(data) {
+		this.readData(arguments);
 		this.assignVariables();
 		this.render();
 	},
@@ -21,7 +21,7 @@ AbstractPage = Class.extend({
 	/**
 	 * Receive data from the server
 	 */
-	readData: function() {
+	readData: function(data) {
 
 	},
 
@@ -36,6 +36,11 @@ AbstractPage = Class.extend({
 	 * Render the page template
 	 */
 	render: function() {
-
+		console.log('render', this.template);
+		if (this.template) {
+			var html = ST.Template.render(this.template, this.data);
+			$('body').html(html);
+			$('body').attr('id', this.template);
+		}
 	}
 });

@@ -4,15 +4,19 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="js/3rdParty/jquery-1.10.2.js"></script>
 		<script type="text/javascript" src="js/3rdParty/mustache.js"></script>
 		<script type="text/javascript" src="js/st.js"></script>
 		<script type="text/javascript" src="js/st.template.js"></script>
+		<script type="text/javascript" src="app/controller/AbstractPage.js"></script>
+		<script type="text/javascript" src="app/controller/IndexPage.js"></script>
+		<script type="text/javascript" src="app/controller/ArticlePage.js"></script>
 	</head>
 	<body>
 		<script type="text/javascript">
 			ST.Template.init();
-			$('body').append(ST.Template.render('article'));
+			ST.Navigation.init();
 		</script>
 	</body>
 </html>
