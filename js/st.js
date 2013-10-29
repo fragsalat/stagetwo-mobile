@@ -18,11 +18,13 @@ ST.Navigation = {
 		this.go(this._currentPage);
 		// Bind naviagte listener
 		$(document.body).delegate('[data-page]', 'click', $.proxy(this._click, this));
+		$(document.body).delegate('[data-reload]', 'click', $.proxy(this._reload, this));
 		$(window).bind('popstate', $.proxy(this._popState, this));
 	},
 
 	go: function(page, data) {
 		if (window[page + 'Page'] !== undefined) {
+			this._currentPage = page;
 			new window[page + 'Page'](data);
 		}
 	},
@@ -43,5 +45,16 @@ ST.Navigation = {
 		if (!event.state) {
 			event.state = event.originalEvent.state;
 		}
+	},
+
+	_reload: function(event) {
+		event.preventDefault();
+
+		ST.Template.init();
+		this.go(this._currentPage);
+		// Reload stylesheet
+		$('link[rel=stylesheet]').each(function() {
+			$(this).replaceWith(this)
+		});
 	}
 };

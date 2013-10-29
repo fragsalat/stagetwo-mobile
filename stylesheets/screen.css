@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -88,45 +88,45 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url(../font/OpenSans-Semibold.ttf) format("woff");
 }
 
-/* line 15, ../sass/screen.scss */
+/* line 16, ../sass/screen.scss */
 .clear {
   clear: both;
 }
 
-/* line 19, ../sass/screen.scss */
+/* line 20, ../sass/screen.scss */
 body {
   background: #fafafa;
   font-family: 'Open Sans';
   font-weight: 300;
 }
 
-/* line 24, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 header {
   background: #555555;
-  color: #ddd;
+  color: #dfdfdf;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 14px;
   padding: 0 10px;
 }
-/* line 31, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 header a {
   display: inline-block;
   padding: 10px;
   font-weight: 300;
   cursor: pointer;
 }
-/* line 36, ../sass/screen.scss */
+/* line 37, ../sass/screen.scss */
 header a:active {
   color: #fff;
 }
 
-/* line 41, ../sass/screen.scss */
-section.article {
+/* line 42, ../sass/screen.scss */
+section.articleList {
   width: 100%;
 }
-/* line 43, ../sass/screen.scss */
-section.article article {
+/* line 44, ../sass/screen.scss */
+section.articleList article {
   width: 100%;
   padding: 10px;
   border-bottom: 1px solid #dfdfdf;
@@ -139,29 +139,62 @@ section.article article {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 53, ../sass/screen.scss */
-section.article article figure {
+/* line 54, ../sass/screen.scss */
+section.articleList article figure {
   float: left;
   margin-right: 10px;
 }
-/* line 56, ../sass/screen.scss */
-section.article article figure img {
+/* line 57, ../sass/screen.scss */
+section.articleList article figure img {
   border: 1px solid #dfdfdf;
   padding: 1px;
   background: #fafafa;
 }
-/* line 62, ../sass/screen.scss */
-section.article article h2 {
+/* line 63, ../sass/screen.scss */
+section.articleList article h2 {
   color: #bd3623;
   margin-bottom: 5px;
   font-weight: 400;
-  width: 80%;
-  float: left;
+  padding-left: 60px;
 }
 /* line 69, ../sass/screen.scss */
-section.article article p.description {
+section.articleList article p.description {
   font-size: 14px;
   line-height: 16px;
-  width: 80%;
-  float: left;
+  padding-left: 60px;
+}
+
+/* line 77, ../sass/screen.scss */
+article.article figure {
+  width: 100%;
+  margin: 10px auto 10px;
+}
+/* line 81, ../sass/screen.scss */
+article.article h2, article.article h1 {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+/* line 86, ../sass/screen.scss */
+article.article h2.title, article.article h1.title {
+  color: #bd3623;
+}
+/* line 90, ../sass/screen.scss */
+article.article p.description {
+  font-size: 14px;
+  line-height: 16px;
+  padding: 0 10px;
+}
+/* line 95, ../sass/screen.scss */
+article.article .paragraphs {
+  padding-top: 10px;
+}
+/* line 97, ../sass/screen.scss */
+article.article .paragraphs .paragraph {
+  margin-bottom: 10px;
+}
+/* line 99, ../sass/screen.scss */
+article.article .paragraphs .paragraph h2.headline {
+  color: #555555;
 }

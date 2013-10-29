@@ -1,8 +1,9 @@
 <header>
 	<a data-page="Article">Article</a>
 	<a data-page="Forum">Forum</a>
+	<a data-reload="true">Reload</a>
 </header>
-<section class="article">
+<section class="articleList">
 	{{#articles}}
 	<article data-page="Article" data-articleID="{{articleID}}">
 		<figure>

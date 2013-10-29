@@ -39,8 +39,10 @@ AbstractPage = Class.extend({
 		console.log('render', this.template);
 		if (this.template) {
 			var html = ST.Template.render(this.template, this.data);
-			$('body').html(html);
-			$('body').attr('id', this.template);
+			$('body').fadeOut(200, function() {
+				$('body').html(html).fadeIn(200);
+				$('body').attr('id', this.template);
+			});
 		}
 	}
 });
